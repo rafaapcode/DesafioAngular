@@ -8,6 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EditUserComponent } from './user/edit-user.component';
 
 const routes: Routes = [
   {
@@ -15,13 +16,17 @@ const routes: Routes = [
   },
   {
     path: "users", component: UserListComponent
+  },
+  {
+    path: "users/edit/:id", component: EditUserComponent
   }
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserListComponent
+    UserListComponent,
+    EditUserComponent
   ],
   imports: [
     FormsModule,

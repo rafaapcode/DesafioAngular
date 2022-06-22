@@ -4,4 +4,5 @@ export interface User {
     email: string;
     site?: string;
     date: Date;
+    id: number;
 }

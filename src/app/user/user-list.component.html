@@ -1,3 +1,6 @@
+<div class="btnadd">
+    <button>Add User</button>
+</div>
 <table>
     <tr>
         <th>User Detail</th>
@@ -18,7 +21,7 @@
             </div>
         </td>
         <td>
-            <button class="edit">Edit</button>
+            <button class="edit" [routerLink]="['/users/edit', user.id]">Edit</button>
         </td>
         <td>
             <button class="delete">Delete</button>
