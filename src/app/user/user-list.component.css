@@ -1,5 +1,5 @@
 table{
-    width: 50%;
+    width: 80%;
     border: 1px solid black;
 }
 
@@ -48,6 +48,7 @@ table tr td .personimg{
 table tr td:nth-child(n+2) {
     text-align: center;
     border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
 }
 
 table tr td:nth-child(n+2) button{
@@ -75,16 +76,3 @@ table tr td:nth-child(n+2) button:hover{
 }
 
 
-/* Icons */
-.email-icon{
-    width: 15px;
-    position: absolute;
-    left: 0;
-    bottom: 57%;
-}
-
-.site-icon{
-    width: 18px;
-    position: absolute;
-    bottom: 32%;
-}
