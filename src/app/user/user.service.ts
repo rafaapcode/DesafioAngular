@@ -18,6 +18,10 @@ export class UserService {
         return this.users.find(user => user.id === id);
     }
 
+    save(usuario: any){
+        
+    }
+
 }
 
 
