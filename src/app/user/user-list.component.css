@@ -16,12 +16,14 @@ table tr .users div{
     padding: 0;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 table tr .users div p {
     margin: 0;
     padding: 0;
     margin-bottom: 5px;
+    margin-left: 20%;
 }
 
 .name{
@@ -37,7 +39,7 @@ table tr .users div p {
     color: lightgray;
     font-size: 10px;
 }
-table tr td img{
+table tr td .personimg{
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -70,4 +72,19 @@ table tr td:nth-child(n+2) button:hover{
 
 .delete{
     background-color: rgb(165, 42, 42);
+}
+
+
+/* Icons */
+.email-icon{
+    width: 15px;
+    position: absolute;
+    left: 0;
+    bottom: 57%;
+}
+
+.site-icon{
+    width: 18px;
+    position: absolute;
+    bottom: 32%;
 }
