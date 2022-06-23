@@ -24,7 +24,7 @@
             <button class="edit" [routerLink]="['/users/edit', user.id]">Edit</button>
         </td>
         <td>
-            <button class="delete">Delete</button>
+            <button (click)="delete(user.id)" class="delete">Delete</button>
         </td>
     </tr>
 </table>

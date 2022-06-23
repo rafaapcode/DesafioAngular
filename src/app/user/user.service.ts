@@ -17,11 +17,6 @@ export class UserService {
     getUserId(id: number) {
         return this.users.find(user => user.id === id);
     }
-
-    save(usuario: any){
-        
-    }
-
 }
 
 
