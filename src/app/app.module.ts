@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditUserComponent } from './user/edit-user.component';
 import { TracePipe } from './user/pipe/trace.pipe';
+import { AddUserComponent } from './user/add-user.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,9 @@ const routes: Routes = [
   },
   {
     path: "users/edit/:id", component: EditUserComponent
+  },
+  {
+    path: "users/add", component: AddUserComponent
   }
 ]
 
@@ -28,7 +32,8 @@ const routes: Routes = [
     AppComponent,
     UserListComponent,
     EditUserComponent,
-    TracePipe
+    TracePipe,
+    AddUserComponent
   ],
   imports: [
     FormsModule,

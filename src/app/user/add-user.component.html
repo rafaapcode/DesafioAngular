@@ -1,0 +1,15 @@
+<div>
+    <label>Name</label>
+    <input [(ngModel)]="newUser.name" type="text">
+
+    <label>Email</label>
+    <input [(ngModel)]="newUser.email" type="email">
+
+    <label>Site</label>
+    <input [(ngModel)]="newUser.site" type="text">
+
+    <label>Imagem Url</label>
+    <input [(ngModel)]="newUser.imgUrl" type="text">
+
+    <button (click)="addUser(newUser)" >Add</button>
+</div>

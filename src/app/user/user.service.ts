@@ -8,6 +8,7 @@ export class UserService {
 
     users: User[] = [];
 
+
     getAllUsers(): User[] {
         this.users = USERS;
 
@@ -17,6 +18,14 @@ export class UserService {
     getUserId(id: number) {
         return this.users.find(user => user.id === id);
     }
+
+    add(user: User){
+        user.id = this.users.length;
+        this.users.push(user);
+        return this.users;
+    }
+
+
 }
 
 
