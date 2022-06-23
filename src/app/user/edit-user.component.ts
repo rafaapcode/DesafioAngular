@@ -20,6 +20,7 @@ export class EditUserComponent implements OnInit {
     }
 
     saveUser(usuario: any): void {
+        
         this.user = usuario;
 
         setTimeout(() => {

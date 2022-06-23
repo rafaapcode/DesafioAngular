@@ -19,7 +19,7 @@ export class UserService {
         return this.users.find(user => user.id === id);
     }
 
-    add(user: User){
+    add(user: User): User[]{
         user.id = this.users.length;
         this.users.push(user);
         return this.users;
