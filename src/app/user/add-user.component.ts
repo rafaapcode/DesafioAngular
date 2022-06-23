@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from "@angular/core";
 import { UserService } from "./user.service";
 
@@ -8,7 +9,7 @@ import { UserService } from "./user.service";
 })
 export class AddUserComponent implements OnInit {
 
-    constructor(private _useService: UserService) { }
+    constructor(private _useService: UserService, private route: Router) { }
 
     newUser: any;
 
@@ -25,6 +26,9 @@ export class AddUserComponent implements OnInit {
 
     addUser(newuser: any) {
         this._useService.add(newuser);
+        setTimeout(() => {
+            this.route.navigate(['/users']);
+        }, 1000)
     }
 
 }

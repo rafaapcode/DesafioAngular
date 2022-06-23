@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { UserService } from "./user.service";
 import { User } from "./user";
+import { Router } from "@angular/router";
 
 @Component({
     templateUrl: "./edit-user.component.html",
@@ -9,7 +10,7 @@ import { User } from "./user";
 })
 export class EditUserComponent implements OnInit {
 
-    constructor(private _userService: UserService, private activateroute: ActivatedRoute) { }
+    constructor(private _userService: UserService, private activateroute: ActivatedRoute, private route: Router) { }
 
     user: any;
 
@@ -20,6 +21,11 @@ export class EditUserComponent implements OnInit {
 
     saveUser(usuario: any): void {
         this.user = usuario;
+
+        setTimeout(() => {
+            this.route.navigate(['/users']);
+        }, 1000)
+
     }
 
 }
