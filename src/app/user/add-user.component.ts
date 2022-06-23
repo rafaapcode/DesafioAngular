@@ -27,6 +27,7 @@ export class AddUserComponent implements OnInit {
     addUser(newuser: any) {
         this._useService.add(newuser);
         setTimeout(() => {
+            alert("Usuário Adicionado com Sucesso!");
             this.route.navigate(['/users']);
         }, 1000)
     }

@@ -3,8 +3,8 @@
 
 
     <label>Name</label>
-    <input [(ngModel)]="newUser.name" type="text">
-
+    <input [(ngModel)]="newUser.name"  type="text">
+  
     <label>Email</label>
     <input [(ngModel)]="newUser.email" type="email">
 
@@ -14,9 +14,8 @@
     <label>Imagem Url</label>
     <input [(ngModel)]="newUser.imgUrl" type="text">
 
-    <button (click)="addUser(newUser)">Add</button>
-
-
-
+    <ng-template [ngIf]="newUser.name" [ngIf]="newUser.email">
+        <button (click)="addUser(newUser)">Add</button>
+    </ng-template>
 
 </div>

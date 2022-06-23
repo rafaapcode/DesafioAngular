@@ -1,4 +1,4 @@
-<div>
+<div #editContainer>
 
 
     <label>Name</label>
@@ -13,7 +13,9 @@
     <label>Imagem Url</label>
     <input [(ngModel)]="user.imgUrl" type="text">
 
-    <button (click)="saveUser(user)">Save Changes</button>
+    <ng-template [ngIf]="user.name" [ngIf]="user.email">
+        <button (click)="saveUser(user)">Save Changes</button>
+    </ng-template>
 
 
 </div>

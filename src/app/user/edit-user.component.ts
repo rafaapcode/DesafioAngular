@@ -24,6 +24,7 @@ export class EditUserComponent implements OnInit {
         this.user = usuario;
 
         setTimeout(() => {
+            alert("Usuário editado com sucesso!");
             this.route.navigate(['/users']);
         }, 1000)
 
