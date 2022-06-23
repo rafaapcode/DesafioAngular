@@ -9,15 +9,13 @@
     </tr>
     <tr *ngFor="let user of userss">
         <td class="users">
-            <img class="personimg"
-                [src]="user.imgUrl"
-                alt="imagem pessoa">
+            <img class="personimg" [src]="user.imgUrl" alt="imagem pessoa">
             <div>
-                <p class="name">{{user.name}}</p>
+                <p class="name">{{user.name | uppercase | Trace: " " : " - " }}</p>
                 <p class="email">
                     {{user.email}}</p>
-               <p #siteUser class="site">{{user.site}}</p>
-                <p class="date">Add on :  {{user.date}}</p>
+                <p #siteUser class="site">{{user.site}}</p>
+                <p class="date">Add on : {{user.date | date: "dd-MMM-yyyy"}}</p>
             </div>
         </td>
         <td>

@@ -9,14 +9,17 @@ table tr .users{
     justify-content: space-evenly;
     border-bottom: 1px solid gray;
     height: 120px;
+    
 }
 
 table tr .users div{
     margin: 0;
     padding: 0;
+    width: 50%;
     display: flex;
     flex-direction: column;
     position: relative;
+    text-align: left;
 }
 
 table tr .users div p {

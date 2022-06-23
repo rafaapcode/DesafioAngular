@@ -9,6 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditUserComponent } from './user/edit-user.component';
+import { TracePipe } from './user/pipe/trace.pipe';
 
 const routes: Routes = [
   {
@@ -26,7 +27,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     UserListComponent,
-    EditUserComponent
+    EditUserComponent,
+    TracePipe
   ],
   imports: [
     FormsModule,
