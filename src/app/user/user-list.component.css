@@ -100,3 +100,8 @@ table tr td:nth-child(n+2) button:hover{
     transform: scale(1.05);
     background-color: rgb(66, 136, 241);
 }
+
+
+.invalidField{
+    border: 5px solid red;
+}
