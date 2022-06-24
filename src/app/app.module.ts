@@ -9,35 +9,26 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditUserComponent } from './user/edit-user.component';
-import { TracePipe } from './user/pipe/trace.pipe';
+import { TracePipe } from './shared/pipe/trace.pipe';
 import { AddUserComponent } from './user/add-user.component';
+import { UserModule } from './user/user.module';
+
 
 const routes: Routes = [
   {
     path: "", redirectTo: "users", pathMatch: "full"
   },
-  {
-    path: "users", component: UserListComponent
-  },
-  {
-    path: "users/edit/:id", component: EditUserComponent
-  },
-  {
-    path: "users/add", component: AddUserComponent
-  }
+
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserListComponent,
-    EditUserComponent,
-    TracePipe,
-    AddUserComponent
   ],
   imports: [
-    FormsModule,
+    UserModule,
     CommonModule,
+    FormsModule,
     BrowserModule,
     RouterModule.forRoot(routes),
     BrowserAnimationsModule
