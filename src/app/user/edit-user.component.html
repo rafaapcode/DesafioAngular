@@ -1,20 +1,28 @@
 <div>
 
     <label>Name</label>
-    <input #userName [ngClass]="userName.value === '' ? 'invalidField' : ''" [(ngModel)]="user.name" type="text">
-
-    <label>Email</label>
-    <input [(ngModel)]="user.email" type="email">
-
-    <label>Site</label>
-    <input [(ngModel)]="user.site" type="text">
-
-    <label>Imagem Url</label>
-    <input [(ngModel)]="user.imgUrl" type="text">
-
-    <ng-template [ngIf]="user.name" [ngIf]="user.email">
-        <button (click)="saveUser(user)">Save Changes</button>
+    <input [ngClass]="{invalidField: !user.name}" [(ngModel)]="user.name" type="text">
+    <ng-template [ngIf]="!user.name">
+        <p class="fieldInvalid">Campo inválido</p>
     </ng-template>
 
+   
+    <label>Email</label>
+    <input [ngClass]="{invalidField: !user.email}"  [(ngModel)]="user.email" type="email">
+    <ng-template [ngIf]="!user.email">
+        <p class="fieldInvalid">Campo inválido</p>
+    </ng-template>
+    <label>Site</label>
+   
+    <input [(ngModel)]="user.site" type="text">
+   
+   
+    <label>Imagem Url</label>
+    <input [ngClass]="{invalidField: !user.imgUrl}"  [(ngModel)]="user.imgUrl" type="text">
+    <ng-template [ngIf]="!user.imgUrl">
+        <p class="fieldInvalid">Campo inválido</p>
+    </ng-template>
+
+    <button (click)="saveUser(user)">Save Changes</button>
 
 </div>

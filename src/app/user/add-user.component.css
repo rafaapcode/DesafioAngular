@@ -13,7 +13,6 @@ div input{
     margin-left: 25%;
     padding: 1rem;
     box-shadow: 0 .7rem 1rem gray;
-    border: none;
     transition: 1s;
     outline: none;
 }
@@ -59,4 +58,19 @@ div button:hover{
     text-align: center;
     color: white;
     font-weight: bold;
+}
+
+.invalidField{
+    border: 2px solid red;
+    border-radius: 2px;
+}
+
+.fieldInvalid{
+    margin-left: 25%;
+    font-weight: bold;
+    color: white;
+    background-color: red;
+    padding: .5rem;
+    border: .3rem;
+    width: fit-content;
 }

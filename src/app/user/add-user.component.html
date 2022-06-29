@@ -3,19 +3,30 @@
 
 
     <label>Name</label>
-    <input [(ngModel)]="newUser.name"  type="text">
-  
+    <input [ngClass]="{invalidField: !newUser.name}" [(ngModel)]="newUser.name" type="text">
+    <ng-template [ngIf]="!newUser.name">
+        <p class="fieldInvalid">Campo inválido</p>
+    </ng-template>
+
+
     <label>Email</label>
-    <input [(ngModel)]="newUser.email" type="email">
+    <input [ngClass]="{invalidField: !newUser.email}" [(ngModel)]="newUser.email" type="email">
+    <ng-template [ngIf]="!newUser.email">
+        <p class="fieldInvalid">Campo inválido</p>
+    </ng-template>
+
+
 
     <label>Site</label>
     <input [(ngModel)]="newUser.site" type="text">
 
-    <label>Imagem Url</label>
-    <input [(ngModel)]="newUser.imgUrl" type="text">
 
-    <ng-template [ngIf]="newUser.name" [ngIf]="newUser.email">
-        <button (click)="addUser(newUser)">Add</button>
+    <label>Imagem Url</label>
+    <input [ngClass]="{invalidField: !newUser.imgUrl}" [(ngModel)]="newUser.imgUrl" type="text">
+    <ng-template [ngIf]="!newUser.imgUrl">
+        <p class="fieldInvalid">Campo inválido</p>
     </ng-template>
+
+    <button (click)="addUser(newUser)">Add</button>
 
 </div>

@@ -16,8 +16,8 @@ export class AddUserComponent implements OnInit {
     ngOnInit(): void {
         this.newUser = {
             imgUrl: "assets/imgs/",
-            name: "",
-            email: "",
+            name: "Coloque Seu Nome",
+            email: "Coloque Seu Email",
             site: "",
             date: new Date(),
             id: 0
